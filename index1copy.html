@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Debashish Sarker</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="portfolio-logo">
+                <span class="red-p">P</span><span class="white-text">ortfolio</span>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-section">
+            <div class="hero-image">
+                <img src="portfolio.png" alt="Portfolio">
+            </div>
+            <div class="hero-content">
+                <p class="intro-line">Computer Science & Engineering Graduate | Software • ML • Cloud • Game Dev</p>
+                <p class="bio-text">
+                    Computer Science and Engineering graduate from BRAC University with experience in software development, machine learning projects, and system-level research. Actively seeking internship opportunities to apply technical skills in real-world environments.
+                </p>
+
+                <div class="header-text">
+                    <p>
+                        Hi, I am <span>Debashish</span> Sarker
+                    </p>
+                </div>
+
+                <div class="links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ABOUT SECTION WITH TABS (FIXED) ========== -->
+    <div id="about">
+        <div class="container">
+            <div class="about-box">
+                <h2 class="about-title">About Me</h2>
+                <p class="about-description">
+                    Computer Science and Engineering graduate from BRAC University with experience in software development, 
+                    machine learning projects, and system-level research. Passionate about building innovative solutions 
+                    across software, ML, cloud, and game development.
+                </p>
+
+                <!-- Tab Buttons -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('skills', event)">Skills</p>
+                    <p class="tab-links" onclick="openTab('education', event)">Education</p>
+                </div>
+
+                <!-- Skills Tab Content -->
+                <div class="tab-contents active-tab" id="skills">
+    <!-- Accordion Item 1: Programming & Development -->
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-icon">▶</span>
+            <span class="accordion-title">💻 Programming & Development</span>
+        </div>
+        <div class="accordion-body">
+            <div class="skills-icons-grid">
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"><span>C</span></div>
+                <div class="skill-icon-item"><div class="no-image-icon">#️⃣</div><span>C#</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 2: Databases -->
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-icon">▶</span>
+            <span class="accordion-title">🗄️ Databases</span>
+        </div>
+        <div class="accordion-body">
+            <div class="skills-icons-grid">
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- Accordion Item 3: Machine Learning & Deep Learning (NEW) -->
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-icon">▶</span>
+            <span class="accordion-title">🤖 Machine Learning & Deep Learning</span>
+        </div>
+        <div class="accordion-body">
+            <div class="skills-icons-grid">
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"><span>TensorFlow</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"><span>PyTorch</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 4: Federated Learning (NEW) -->
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-icon">▶</span>
+            <span class="accordion-title">🔗 Federated Learning</span>
+        </div>
+        <div class="accordion-body">
+            <div class="skills-icons-grid">
+                <div class="skill-icon-item"><div class="no-image-icon">🌸</div><span>Flower FL</span></div>
+                <div class="skill-icon-item"><div class="no-image-icon">📈</div><span>FedAvg</span></div>
+                <div class="skill-icon-item"><div class="no-image-icon">⚙️</div><span>FedProx</span></div>
+                <div class="skill-icon-item"><div class="no-image-icon">🎯</div><span>FedOpt</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 5: Tools & Technologies (NEW) -->
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-icon">▶</span>
+            <span class="accordion-title">🛠️ Tools & Technologies</span>
+        </div>
+        <div class="accordion-body">
+            <div class="skills-icons-grid">
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"><span>VS Code</span></div>
+                <div class="skill-icon-item"><div class="no-image-icon">🔌</div><span>Arduino IDE</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 6: Frameworks (NEW) -->
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-icon">▶</span>
+            <span class="accordion-title">📚 Frameworks</span>
+        </div>
+        <div class="accordion-body">
+            <div class="skills-icons-grid">
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"><span>Laravel</span></div>
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"><span>Flask</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 7: Game Engine (NEW) -->
+    <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="accordion-icon">▶</span>
+            <span class="accordion-title">🎮 Game Engine</span>
+        </div>
+        <div class="accordion-body">
+            <div class="skills-icons-grid">
+                <div class="skill-icon-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity"><span>Unity</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+    <!-- Similar structure for remaining categories: ML, Federated Learning, Tools, Frameworks -->
+</div>
+
+                <!-- Education Tab Content (INSTITUTION NAMES UPDATED) -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>
+                            <strong>BRAC University</strong><br>
+                            BSc in Computer Science and Engineering (2021 - 2026)<br>
+                            CGPA: 3.19/4.00
+                        </li>
+                        <li>
+                            <strong>Ideal College, Dhanmondi</strong><br>
+                            Higher School Certificate (HSC) in Science<br>
+                            GPA: 4.92/5.00
+                        </li>
+                        <li>
+                            <strong>Willes Little Flower School and College, Dhaka</strong><br>
+                            Secondary School Certificate (SSC) in Science<br>
+                            GPA: 5.00/5.00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/teacher-teaching-students-in-classroom-illustration-vector.jpg">
+                    <div class="layer">
+                        <h3>Smart Learn Platform</h3>
+                        <p>A full-stack learning platform built with Laravel that allows teachers to upload study materials and students to access study materials.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/captcha-icon-technology-142370206.webp">
+                    <div class="layer">
+                        <h3>CAPTCHA Recognition</h3>
+                        <p>A deep learning-based CAPTCHA recognition system using neural network architectures for text-based CAPTCHA solving. Includes model training, evaluation, and performance analysis.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/360_F_487799402_pcTpnDtqLH9lCh3cunh2zShLAe6K0WbR.jpg">
+                    <div class="layer">
+                        <h3>Planner Platform</h3>
+                        <p>A comprehensive web application for managing academic schedules, optimizing study routines, and tracking course events.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bank-composition-with-outdoor-landscape-classic-building-with-columns-car-pedestrian-silhouette-cityscape-vector-illustration_1284-82674.avif">
+                    <div class="layer">
+                        <h3>Banking Managment System</h3>
+                        <p>A database-driven banking system built with PHP and SQL, supporting account management, transactions, and basic banking operations
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/car-Loan-Delinquency-Rates-1.png">
+                    <div class="layer">
+                        <h3>Fraud Detection System</h3>
+                        <p>Implemented a ML model to detect fraud accounts based on dataset that have bank transactions history using supervised learning techniques. 
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/binary-code-475664_1920.jpeg">
+                    <div class="layer">
+                        <h3>Binary Search using Assembly Language</h3>
+                        <p>An implementation of the binary search algorithm using Assembly language, demonstrating low-level programming concepts and memory-level operations.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <script>
+        // ========== FIXED JAVASCRIPT FOR TAB UNDERLINE ==========
+        function openTab(tabname, event) {
+            // Get all tab links and tab contents
+            var tabLinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+            
+            // Remove active class from all tab links
+            for (var i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active-link");
+            }
+            
+            // Remove active class from all tab contents
+            for (var j = 0; j < tabContents.length; j++) {
+                tabContents[j].classList.remove("active-tab");
+            }
+            
+                // Add active class to the clicked tab link
+            event.currentTarget.classList.add("active-link");
+            
+            // Add active class to the corresponding tab content
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        function toggleAccordion(headerElement) {
+            var accordionItem = headerElement.parentElement;
+            var accordionBody = accordionItem.querySelector(".accordion-body");
+            var icon = headerElement.querySelector(".accordion-icon");
+            
+            // Close all other accordion items
+            var allItems = document.querySelectorAll(".accordion-item");
+            allItems.forEach(function(item) {
+                if (item !== accordionItem) {
+                    var body = item.querySelector(".accordion-body");
+                    var itemIcon = item.querySelector(".accordion-icon");
+                    if (body.classList.contains("active")) {
+                        body.classList.remove("active");
+                        if (itemIcon) itemIcon.textContent = "▶";
+                    }
+                }
+            });
+            
+            // Toggle current item
+            if (accordionBody.classList.contains("active")) {
+                accordionBody.classList.remove("active");
+                icon.textContent = "▶";
+            } else {
+                accordionBody.classList.add("active");
+                icon.textContent = "▼";
+            }
+        }
+    </script>
+</body>
+</html>

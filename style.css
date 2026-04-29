@@ -1,0 +1,787 @@
+/* ===== Global Styles ===== */
+/* Add this to allow icons to use their own font-family */
+i {
+    font-family: inherit; 
+    font-weight: inherit;
+}
+
+/* OR, more specifically for Font Awesome: */
+.fa-solid, .fas, .fa-brands, .fa {
+    font-family: "Font Awesome 6 Free" !important; /* Forces the icon font back */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+    line-height: 1.6;
+}
+
+#header {
+    background-color: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 100px 10% 20px 10%; /* Added 100px padding-top to push content down */
+}
+
+/* ===== NAVBAR STYLES ===== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    width: 100%;
+    position: fixed; /* Keep it at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;   /* Keep it above everything */
+    background: #080808; /* Dark background to hide text passing behind it */
+}
+
+.portfolio-logo {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.red-p {
+    color: #ff3a3a;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff6347;
+    left: 0;
+    bottom: -5px;
+    position: absolute;
+    transition: 0.5s;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* ===== HERO SECTION WITH TWO COLUMNS ===== */
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    flex: 0 0 auto;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 99, 71, 0.2);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+/* ===== INTRO & BIO STYLES ===== */
+.intro-line {
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 0 0 15px;
+    color: #dddddd;
+}
+
+.bio-text {
+    text-align: left;
+    margin: 0 0 30px;
+    color: #bbbbbb;
+    line-height: 1.7;
+}
+
+.header-text {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header-text span {
+    font-size: 30px;
+    color: #fc0404;
+}
+
+/* ===== SOCIAL LINKS ===== */
+.links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    color: #fff;
+    background: #2c2c2c;
+    padding: 10px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #ff634740;
+}
+
+.links a:hover {
+    background: #ff6347;
+    color: #080808;
+    transform: translateY(-3px);
+    border-color: #ff6347;
+}
+
+/* ===== ABOUT SECTION - BOX STYLES ===== */
+#about {
+    margin-top: 60px;
+    padding: 40px 0 60px;
+}
+
+/* Main about box container */
+.about-box {
+    background: #111111;
+    border-radius: 24px;
+    padding: 45px 50px;
+    border-left: 5px solid #ff6347;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff6347;
+    letter-spacing: -0.5px;
+}
+
+.sub-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ff6347;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.about-description {
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+/* ===== FIXED TAB STYLES - UNDERLINE WORKING NOW ===== */
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    gap: 20px;
+}
+
+.tab-links {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 8px;
+    color: #aaaaaa;
+    transition: color 0.3s ease;
+}
+
+/* UNDERLINE EFFECT FOR TAB LINKS */
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #ff6347;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+/* ACTIVE TAB LINK - RED UNDERLINE (FIXED) */
+.tab-links.active-link {
+    color: #ff6347;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+/* Hover effect for tabs */
+.tab-links:hover {
+    color: #ff6347;
+}
+
+.tab-links:hover::after {
+    width: 100%;
+}
+
+/* Tab content containers */
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Accordion / Dropdown skills section styles */
+.accordion-item {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: #1a1a1a;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+    cursor: pointer;
+    background: #1e1e1e;
+}
+
+.accordion-header:hover {
+    background: #252525;
+}
+
+.accordion-icon {
+    font-size: 16px;
+    color: #ff6347;
+    width: 24px;
+}
+
+.accordion-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: #131313;
+    padding: 0 22px;
+}
+
+.accordion-body.active {
+    max-height: 1000px;
+    padding: 20px 22px 22px;
+}
+
+.skills-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.skill-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 16px;
+    background: #232323;
+    border-radius: 16px;
+    min-height: 120px;
+    border: 1px solid #2e2e2e;
+}
+
+.skill-icon-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.skill-icon-item span {
+    font-size: 0.95rem;
+    color: #dddddd;
+    text-align: center;
+}
+
+.no-image-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background: #2a2a2a;
+    border-radius: 12px;
+}
+
+/* Fade animation for tab switching */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills list styling */
+.tab-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tab-contents ul li {
+    color: #dddddd;
+    font-size: 1rem;
+    padding: 12px 0;
+    position: relative;
+    padding-left: 28px;
+    transition: 0.2s;
+    border-bottom: 1px solid #222222;
+}
+
+.tab-contents ul li:last-child {
+    border-bottom: none;
+}
+
+.tab-contents ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #ff6347;
+    font-size: 1rem;
+}
+
+.tab-contents ul li:hover {
+    transform: translateX(5px);
+    color: #ff6347;
+}
+
+/* Education section - strong (institution names) styling */
+.tab-contents ul strong {
+    color: #ff6347;
+    font-size: 1.05rem;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px 5%;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .portfolio-logo {
+        font-size: 36px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .hero-image {
+        min-width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .intro-line {
+        text-align: center;
+    }
+
+    .bio-text {
+        text-align: center;
+    }
+
+    .header-text {
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    .links {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .links a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .about-box {
+        padding: 30px 25px;
+    }
+    
+    .about-title {
+        font-size: 28px;
+    }
+    
+    .tab-titles {
+        gap: 30px;
+    }
+    
+    .tab-links {
+        font-size: 16px;
+    }
+
+    /* ===== ACCORDION / DROPDOWN SKILLS SECTION STYLES ===== */
+    .accordion-item {
+        margin-bottom: 12px;
+        border-radius: 12px;
+        background: #1a1a1a;
+        overflow: hidden;
+        border: 1px solid #2a2a2a;
+    }
+
+    .accordion-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        cursor: pointer;
+        background: #1e1e1e;
+    }
+
+    .accordion-header:hover {
+        background: #252525;
+    }
+
+    .accordion-icon {
+        font-size: 14px;
+        color: #ff6347;
+        width: 20px;
+    }
+
+    .accordion-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background: #131313;
+    }
+
+    .accordion-body.active {
+        max-height: 500px;
+        padding: 20px;
+    }
+
+    .skills-icons-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .skill-icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        background: #1e1e1e;
+        border-radius: 12px;
+        min-width: 80px;
+        border: 1px solid #2e2e2e;
+    }
+
+    .skill-icon-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-icon-item span {
+        font-size: 0.8rem;
+        color: #cccccc;
+    }
+
+    .no-image-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        background: #2a2a2a;
+        border-radius: 10px;
+    }
+    
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    min-height: 200px;
+    background: #111;
+}
+.work img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.layer {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(255, 0, 79, 0.92); /* The red overlay color */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 20px; /* Tighter padding to save vertical space */
+    text-align: center;
+    transform: translateY(100%); /* Hides the layer initially */
+    transition: transform 0.5s ease; /* Smooth hover effect */
+    gap: 10px; /* Consistent spacing between title, text, and button */
+}
+
+.layer h3 {
+    font-weight: 600;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.layer p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+    color: #f5f5f5;
+    /* This part prevents the text from overflowing by limiting it to 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.layer a {
+    margin-top: 5px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* CRITICAL: This stops the circle from squashing when text is long */
+}
+
+
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    transform: translateY(0);
+}
+
+/*-------------------contact section styles-------------------*/
+.row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+.contact-left {
+    flex-basis:35%;
+}
+.contact-right{
+    flex-basis:60%;
+
+}
+.contact left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 20px;
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.btn.btn2::before,
+.btn.btn2::after,
+.contact-left::before,
+.contact-left::after {
+    display: none;
+}
+.contact-right-form{
+    width:100%;
+
+}
+form input, form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    border-radius: 20px;
+    padding: 14px 60px;
+    font-size:18px;
+    margin-top:20px;
+    cursor:pointer;
+    border: none;
+}
+#msg{
+ color: #61b752;
+ margin-top: 10px;
+ display:block;
+}
+.btn {
+    display: inline-block;
+    background: #ff004f;
+    color: #fff !important;           /* Force white text */
+    text-decoration: none !important; /* Remove blue underline */
+    padding: 7px 10px;
+    border-radius: 30px;              /* Round edges */
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.see-more-btn {
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    .header-text span {
+        font-size: 24px;
+    }
+    
+    .about-box {
+        padding: 20px;
+    }
+    
+    .tab-titles {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+/* ----------------------css for small screens ---------------------- */
+@media only screen and (max-width: 600px) {
+    .hero-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+}
+ 
